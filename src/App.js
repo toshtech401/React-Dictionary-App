@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import Dictionary from "./Dictionary"; 
+import React from "react";
+import tardis from "./book-background.jpg";  
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <header className="app-header">
+            <img src={tardis} className="tardis" alt="tardis" />
+            <h1>Dictionary App</h1>
+        </header>
+        <main>
+          <Dictionary defaultKeyword="Doctor" />
+        </main>
+          <footer className="app-footer">
+            <a
+              href="https://github.com/toshtech401"
+              id="open-source-link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <strong>Open source code</strong>{" "}
+            </a>
+            by Mustapha <br/> 👩🏻‍💻 <br/>  Currently located in Ilorin, Kwara State.
+          </footer>
+      </div>
     </div>
   );
 }
